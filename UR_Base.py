@@ -70,3 +70,7 @@ class UR_BASE(object):
         '''设置每个关节扭矩'''
         joint_torques = joint_torques.tolist()
         self.rtde_c.directTorque(joint_torques)
+
+    def getJacobian(self):
+        '''得到雅可比矩阵'''
+        return self.rtde_c.getJacobian()

@@ -87,8 +87,8 @@ class ImpedanceController:
         返回:
             J: 6x6 雅可比矩阵
         """
-        jacobian = self.robot.rtde_c.getJacobian()
-        return np.array(jacobian)
+        jacobian = self.robot.getJacobian()
+        return np.array(jacobian)   
     
     def calculate_cartesian_error(self):
         """
